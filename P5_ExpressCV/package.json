@@ -1,0 +1,16 @@
+{
+    "name": "P5_ExpressCV",
+    "author": "CORE-UPM",
+    "license": "GNU",
+    "version": "0.1.0",
+    "info": {
+        "githubURL": "CORE-UPM/P5_ExpressCV",
+        "serverUrl": "https://autocorector.dit.upm.es/",
+        "courseId": "395",
+        "assignmentId": "51126"
+    },
+    "dependencies": {
+        "autocorector": "^2.1.1",
+        "express-generator": "^4.16.1"
+    }
+}

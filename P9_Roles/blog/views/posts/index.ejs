@@ -1,0 +1,27 @@
+<section>
+    <h2>Posts:</h2>
+    <div class="postOptions">
+        <%# crear un nuevo post solo aparece si estás logueado.%>
+        <% if(locals.loginUser) {%>
+            <a href="/posts/new">Nuevo post</a>
+        <% } %>
+    </div>
+    <% for (var i in posts) { %>
+        <% var post = posts[i]; %>
+        <article class="postShow">
+            <h3 class="postTitle"><%= post.title %></h3>
+            <%- include('../attachments/_attachment', { post: post }) %>
+            <div class="postOptions">
+                <a href="/posts/<%= post.id %>">Show</a>
+                <%# solo a admin o autor %>
+                <% if(locals.loginUser?.isAdmin || locals.loginUser?.id === post.authorId) {%>
+                    <a href="/posts/<%= post.id %>/edit">Edit</a>
+                    <a href="/posts/<%= post.id %>?_method=DELETE" onClick="return confirm('Delete: <%= post.title %>');">Delete</a>
+                <% } %>
+            </div>
+            <div>
+                <small id="author">Post creado por <b><%= post.author?.username ?? "Anonymous" %></b> </small>
+            </div>
+        </article>
+    <% } %>
+</section>

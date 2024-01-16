@@ -1,0 +1,22 @@
+<section>
+    <h2>User:</h2>
+    <ul>
+        <li>
+            <span>User name:<b><%= user.username %></b></span>
+        </li>
+        <li>
+            <span>Email:<b><%= user.email %></b></span>
+        </li>
+        <li>
+            <span>Administrator:<b><%= user.isAdmin ? "Yes" : "No" %></b></span>
+        </li>
+    </ul>
+    <%# botones para ver, editar o borrar un usuariosolo le aparecen al propio usuario, o al admin%>
+    <% if(locals.loginUser?.isAdmin || locals.loginUser?.id === user.id){ %>
+        <a href="/users/<%= user.id %>/edit" class="button-2">Editar</a>
+        <a href="/users/<%= user.id %>?_method=DELETE"
+            onClick="return confirm('Delete user: <%= user.username %>');"
+            class="button-2">Borrar</a>
+    <% } %>
+</section>
+

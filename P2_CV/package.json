@@ -1,0 +1,15 @@
+{
+    "name": "P2_CV",
+    "author": "CORE-UPM",
+    "license": "GNU",
+    "version": "0.1.0",
+    "info": {
+        "githubURL": "CORE-UPM/P2_CV",
+        "serverUrl": "https://autocorector.dit.upm.es/",
+        "courseId": "395",
+        "assignmentId": "49172"
+    },
+    "dependencies": {
+        "autocorector": "^2.1.1"
+    }
+}

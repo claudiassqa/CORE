@@ -1,0 +1,15 @@
+{
+    "name": "P1_Calculadora_HTTP",
+    "author": "CORE-UPM",
+    "license": "GNU",
+    "version": "0.1.0",
+    "info": {
+        "githubURL": "CORE-UPM/P1_calculadora_HTTP",
+        "serverUrl": "https://autocorector.dit.upm.es/",
+        "courseId": "395",
+        "assignmentId": "48277"
+    },
+    "dependencies": {
+        "autocorector": "^2.1.1"
+    }
+}
